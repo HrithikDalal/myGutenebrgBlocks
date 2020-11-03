@@ -71,28 +71,34 @@ function create_block_portfolio_block_block_init() {
  * @return mixed
  */
 function portfolio_block_render_callback( $block_attributes ) {
-	$post_query  = new WP_Query(
+	$post_query = new WP_Query(
 		array(
 			'post_type'      => 'portfolio',
 			'posts_per_page' => $block_attributes['numberOfPosts'],
 		)
 	);
-	$str         = '<h3 class ="portfolio-title">D\'SIGN THE SOUL</h3>';
-	$str        .= '<div class="block-portfolio-content">';
-	$post_index  = 1;
-	$total_posts = $post_query->post_count;
+	$str        = '<h3 class ="portfolio-title">D\'SIGN THE SOUL</h3>';
+	$str       .= '<div class="block-portfolio-content">';
+
+	$post_index  = 1; // Index to loop through all the posts.
+	$total_posts = $post_query->post_count; // Number of Posts found.
+
 	while ( $post_query->have_posts() ) :
+
+		/* Calculate previous and next post index for the Lighthous Image ID */
 		if ( 1 === $post_index ) {
-			$prev_post_index = $total_posts;
+			$prev_post_index = $total_posts; // Previous Post Image ID Index.
 		} else {
 			$prev_post_index = $post_index - 1;
 		}
 		if ( $post_index === $total_posts ) {
-			$next_post_index = 1;
+			$next_post_index = 1; // Next Post Image ID Index.
 		} else {
 			$next_post_index = $post_index + 1;
 		}
+
 		$post_query->the_post();
+
 		$str .= '<a class="block-post-thumbnail" href="#img' . $post_index . '">';
 		$str .= '<div id="image-overlay" class="image-overlay"><span class="dashicons dashicons-cover-image"></span><span>View Image</span></div>';
 		$str .= get_the_post_thumbnail();
@@ -105,9 +111,12 @@ function portfolio_block_render_callback( $block_attributes ) {
 		$str .= '<div class="post-title"><a aia-hidden="true" href="' . get_the_permalink() . '" tabindex="-1">' . get_the_title() . '</a></div>';
 		$str .= '<div><a href="#img' . $next_post_index . '" class="lightbox__next">&#8594;</a></div>';
 		$str .= '</div></div></div>';
+
 		$post_index++;
 	endwhile;
+
 	$str .= '</div>';
+
 	return $str;
 }
 

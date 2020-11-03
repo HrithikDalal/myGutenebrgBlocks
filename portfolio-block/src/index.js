@@ -71,6 +71,7 @@ registerBlockType( 'create-block/portfolio-block', {
 	attributes: {
 		avilablePosts: {
 			type: "number",
+			default: "0",
 		},
 		numberOfPosts: {
 			type: "string",

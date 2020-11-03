@@ -40,6 +40,11 @@ export default function Edit( { attributes, setAttributes } ) {
 			console.log(error);
 		}
 	}, [])
+	
+	if (attributes.avilablePosts == 0) {
+		return "There are no Portfolio Items present. Please add some Portfolio Posts first";
+	}
+	
 	return ([
 		<div className = "block-wrapper" >
 			<h1>D'SIGN THE SOUL</h1>
