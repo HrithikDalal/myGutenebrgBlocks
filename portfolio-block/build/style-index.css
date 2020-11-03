@@ -1,0 +1,118 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-create-block-portfolio-block {
+  background-color: var(--wp-admin-theme-color);
+  color: #fff;
+  padding: 2px; }
+
+.portfolio-title {
+  font-size: 30px;
+  text-align: center;
+  font-weight: 400;
+  text-decoration: underline; }
+
+.block-portfolio-content {
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+
+.block-post-thumbnail img {
+  cursor: pointer;
+  position: relative;
+  height: 210px;
+  width: 284px;
+  border-radius: 10px;
+  margin: 5px; }
+
+.block-post-thumbnail .image-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  margin-left: -2px;
+  border-radius: 10px;
+  height: 220px;
+  width: 297px;
+  opacity: 0;
+  z-index: 3; }
+
+.block-post-thumbnail:hover .image-overlay {
+  opacity: 1; }
+
+.block-post-thumbnail:hover img {
+  transform: scale(1.05);
+  z-index: 2; }
+
+/** LIGHTBOX MARKUP **/
+.block-lightbox {
+  /* Default to hidden */
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1em;
+  background: rgba(0, 0, 0, 0.8); }
+
+/* Unhide the lightbox when it's the target */
+.block-lightbox:target {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.block-lightbox__content {
+  cursor: pointer;
+  display: block;
+  padding: 10px;
+  background-color: #ffffff;
+  max-width: 80vw; }
+
+.block-lightbox__image {
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain; }
+
+.block-lightbox__content .lightbox__exit {
+  position: absolute;
+  z-index: 10;
+  height: 30px;
+  width: 30px;
+  font-size: 20px;
+  margin-left: 10px;
+  background-color: #ffffff;
+  margin-top: -10px;
+  padding: 2px 2px 2px 6px; }
+
+.block-lightbox__footer {
+  display: flex;
+  justify-content: space-between;
+  color: #62585f;
+  padding: 0 10px; }
+
+.block-lightbox__content img {
+  border-radius: 5px;
+  max-height: 80vh; }
+
+.block-lightbox__content .lightbox__previous {
+  font-size: 30px; }
+
+.block-lightbox__content .post-title {
+  padding-top: 10px;
+  font-size: 20px; }
+
+.block-lightbox__content .lightbox__next {
+  font-size: 30px; }
+
+
+/*# sourceMappingURL=style-index.css.map*/

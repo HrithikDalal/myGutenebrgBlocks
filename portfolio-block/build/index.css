@@ -1,0 +1,15 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-create-block-portfolio-block {
+  border: 1px dotted #f00; }
+
+.block-wrapper {
+  border: 3px solid gray;
+  padding: 20px;
+  background: antiquewhite; }
+
+
+/*# sourceMappingURL=index.css.map*/
