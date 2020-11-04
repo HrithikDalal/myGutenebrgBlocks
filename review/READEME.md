@@ -15,8 +15,8 @@ This is a static block for adding movie reviews. It takes movie-poster, movie-ti
 
 1. Editor View
 
-![Editor View](/screenshots/editorview.png?raw=true)
+![Editor View](/screenshots/review-block-editorview.png?raw=true)
 
 2. This is how the block will display on the post page.
 
-![Frontend view](/screenshots/siteview.png?raw=true)
+![Frontend view](/screenshots/review-block-siteview.png?raw=true)
